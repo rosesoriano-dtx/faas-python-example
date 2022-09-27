@@ -1,9 +1,6 @@
-from jinja2 import Template
-import json
+import numpy as np
 
 def handle(req):
-    input = json.loads(req)
-
-    t = Template("{{greeting}} {{name}}")
-    res = t.render(name=input["name"], greeting=input["greeting"])
-    return res 
+    a = np.array([1,2,3,4])
+    b = np.array([1,2,3,4])
+    return a.dot(b)
